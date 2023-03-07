@@ -1,0 +1,7 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/changes/app_init.sql
+  - include:
+      file: db/changelog/changes/add_other_tables.sql
+  - include:
+      file: db/changelog/changes/insert_test_data.sql
