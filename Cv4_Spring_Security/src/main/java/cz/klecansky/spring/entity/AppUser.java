@@ -35,7 +35,7 @@ public class AppUser {
 
     @OneToMany(mappedBy = "appUser")
     @JsonManagedReference
-    private Set<Task> items;
+    private Set<Task> items = new HashSet<>();
 
     @ManyToMany(cascade = {CascadeType.ALL})
     @JoinTable(
@@ -44,5 +44,5 @@ public class AppUser {
             inverseJoinColumns = {@JoinColumn(name = "role_id")}
     )
     @JsonManagedReference
-    Set<Role> roles = new HashSet<>();
+    private Set<Role> roles = new HashSet<>();
 }
